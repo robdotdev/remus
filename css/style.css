@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.header {
+  max-width: 144rem;
+  max-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "leftSideUp rightSide rightSide" "leftSideDown rightSide rightSide";
+}
+.header__menu {
+  width: 144rem;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: auto;
+}
+.header__menu--links {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.header__menu--links__link {
+  font-size: 1.8rem;
+  color: #000;
+}
+.header__menu--links__link:not(:first-child) {
+  margin-left: 5rem;
+}
+.header__menu--links__link:nth-child(5) {
+  margin-right: 11rem;
+}
+.header__menu--links__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 4.7rem;
+  background: #ff6b6b;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.rightSide {
+  grid-area: rightSide;
+  padding-top: 18rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: max-content 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "h1 h1 h1" "orar slide slide";
+}
+.rightSide .h1 {
+  grid-area: h1;
+}
+.rightSide .h1 .para--header {
+  display: flex;
+  align-items: center;
+  margin-left: 9rem;
+}
+.rightSide .h1 .para--header p {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 2.4rem;
+  color: #000;
+  margin-left: 1.8rem;
+}
+.rightSide .h1 h1 {
+  font-weight: 600;
+  font-size: 14rem;
+  color: #4e4e4e;
+  margin-left: -25rem;
+}
+.rightSide .orar {
+  grid-area: orar;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rightSide .orar__btn {
+  width: 24rem;
+  height: 5rem;
+  background: #ff6b6b;
+  border-radius: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 5.7rem;
+}
+.rightSide .orar__btn img {
+  margin-right: 0.7rem;
+}
+.rightSide .orar__card {
+  padding: 0 2rem;
+  width: 24rem;
+  height: 7rem;
+  background: #fff;
+  box-shadow: 0px 0.4rem 2.5rem -1rem rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+}
+.rightSide .orar__card:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.rightSide .orar__card--icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 10rem;
+}
+.rightSide .orar__card--icon__calendar {
+  background: url(/img/calendar-icon.png), #ffafaf;
+  width: 4.6rem;
+  height: 4.6rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 10rem;
+}
+.rightSide .orar__card--icon__clock {
+  background: url(/img/ceas-icon.png), #ffafaf;
+  width: 4.6rem;
+  height: 4.6rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 10rem;
+}
+.rightSide .orar__card--icon__phone {
+  background: url(/img/phone-icon.png), #ffafaf;
+  width: 4.6rem;
+  height: 4.6rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 10rem;
+}
+.rightSide .orar__card--txt {
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  color: #4e4e4e;
+}
+.rightSide .slide {
+  grid-area: slide;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 0 4rem 0;
+}
+.rightSide .slide .imgs {
+  position: relative;
+}
+.rightSide .slide .imgs::before {
+  content: "";
+  background: #ffb3b3;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.rightSide .slide__btns {
+  display: flex;
+  align-items: center;
+  padding-right: 12rem;
+  padding-top: 1rem;
+}
+.rightSide .slide__btns span {
+  margin: 0 1rem;
+  font-size: 2.6rem;
+  font-weight: 300;
+}
+.rightSide .slide__btns img {
+  cursor: pointer;
+}
+
+.leftSideUp {
+  grid-area: leftSideUp;
+  width: 48rem;
+  height: 80rem;
+  border-radius: 0px 0px 29rem 29rem;
+  background-image: url(../img/header-h.png);
+  background-color: rgba(255, 105, 105, 0.51);
+  background-blend-mode: screen;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.leftSideDown {
+  padding: 1.5rem 0;
+  grid-area: leftSideDown;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+}
+.leftSideDown .icon {
+  cursor: pointer;
+}
+.leftSideDown .icon:not(:first-child) {
+  margin-left: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */
