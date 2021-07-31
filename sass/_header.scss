@@ -322,8 +322,9 @@
 
     @media only screen and (max-width: $bp-small) {
       padding-right: 0;
-      position: absolute;
-      top: 32rem;
+      padding-top: 4rem;
+      // position: absolute;
+      // top: 32rem;
     }
   }
 
