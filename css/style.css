@@ -10,6 +10,21 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 90em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 45%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -19,7 +34,7 @@ body {
 
 .header {
   max-width: 144rem;
-  max-height: 100vh;
+  max-height: 90vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -27,32 +42,47 @@ body {
   gap: 0px 0px;
   grid-template-areas: "leftSideUp rightSide rightSide" "leftSideDown rightSide rightSide";
 }
-.header__menu {
-  width: 144rem;
+@media only screen and (max-width: 56.25em) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "leftSideUp" "leftSideDown" "rightSide";
+  }
+}
+
+#menu {
+  background-color: rgba(255, 105, 105, 0.51);
+}
+
+.menu {
+  max-width: 144rem;
+  margin: 0 auto;
   padding: 1.5rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: auto;
 }
-.header__menu--links {
+.menu--links {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.header__menu--links__link {
+@media only screen and (max-width: 50em) {
+  .menu--links {
+    display: none;
+  }
+}
+.menu--links__link {
   font-size: 1.8rem;
   color: #000;
 }
-.header__menu--links__link:not(:first-child) {
+.menu--links__link:not(:first-child) {
   margin-left: 5rem;
 }
-.header__menu--links__link:nth-child(5) {
+.menu--links__link:nth-child(5) {
   margin-right: 11rem;
 }
-.header__menu--links__btn {
+.menu--links__btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,20 +96,61 @@ body {
 
 .rightSide {
   grid-area: rightSide;
-  padding-top: 18rem;
+  padding-top: 10rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: max-content 1fr;
   gap: 0px 0px;
   grid-template-areas: "h1 h1 h1" "orar slide slide";
 }
+@media only screen and (max-width: 68.75em) {
+  .rightSide {
+    grid-template-rows: max-content 1fr 1fr 1fr;
+    grid-template-areas: "h1 h1 h1" "btn btn btn" "orar orar orar" "slide slide slide";
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .rightSide {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "slide";
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .rightSide {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "orar" "slide";
+  }
+}
 .rightSide .h1 {
   grid-area: h1;
+}
+@media only screen and (max-width: 56.25em) {
+  .rightSide .h1 {
+    position: absolute;
+    top: 17rem;
+    width: 100%;
+    padding: 2rem 8rem 2rem 8rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .rightSide .h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .rightSide .h1 .para--header {
   display: flex;
   align-items: center;
   margin-left: 9rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .rightSide .h1 .para--header {
+    margin-left: 0;
+  }
 }
 .rightSide .h1 .para--header p {
   font-style: italic;
@@ -94,11 +165,59 @@ body {
   color: #4e4e4e;
   margin-left: -25rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .rightSide .h1 h1 {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 44.0625em) {
+  .rightSide .h1 h1 {
+    font-size: 11rem;
+  }
+}
 .rightSide .orar {
   grid-area: orar;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 68.75em) {
+  .rightSide .orar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .rightSide .orar {
+    position: absolute;
+    width: max-content;
+    top: 65rem;
+    left: 50rem;
+  }
+}
+@media only screen and (max-width: 50.375em) {
+  .rightSide .orar {
+    flex-direction: column;
+    top: 55rem;
+    left: 70rem;
+  }
+}
+@media only screen and (max-width: 41em) {
+  .rightSide .orar {
+    flex-direction: column;
+    top: 55rem;
+    left: 65rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .rightSide .orar {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 .rightSide .orar__btn {
   width: 24rem;
@@ -113,6 +232,11 @@ body {
   cursor: pointer;
   margin-bottom: 5.7rem;
 }
+@media only screen and (max-width: 68.75em) {
+  .rightSide .orar__btn {
+    display: none;
+  }
+}
 .rightSide .orar__btn img {
   margin-right: 0.7rem;
 }
@@ -126,8 +250,24 @@ body {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 68.75em) {
+  .rightSide .orar__card {
+    margin-bottom: 4rem;
+  }
+}
 .rightSide .orar__card:not(:last-child) {
   margin-bottom: 4rem;
+}
+@media only screen and (max-width: 68.75em) {
+  .rightSide .orar__card:not(:last-child) {
+    margin-bottom: 4rem;
+    margin-right: 2rem;
+  }
+}
+@media only screen and (max-width: 50.375em) {
+  .rightSide .orar__card:not(:last-child) {
+    margin-right: 0;
+  }
 }
 .rightSide .orar__card--icon {
   width: 4rem;
@@ -163,6 +303,39 @@ body {
   font-size: 1.6rem;
   color: #4e4e4e;
 }
+.rightSide .btnbook {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .rightSide .btnbook {
+    padding-right: 0;
+  }
+}
+.rightSide .btn {
+  width: 24rem;
+  height: 5rem;
+  background: #ff6b6b;
+  border-radius: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 4rem;
+  visibility: hidden;
+  position: relative;
+}
+@media only screen and (max-width: 68.75em) {
+  .rightSide .btn {
+    visibility: visible;
+  }
+}
+.rightSide .btn img {
+  margin-right: 0.7rem;
+}
 .rightSide .slide {
   grid-area: slide;
   display: flex;
@@ -171,18 +344,20 @@ body {
   align-items: flex-end;
   padding: 0 0 4rem 0;
 }
-.rightSide .slide .imgs {
-  position: relative;
+@media only screen and (max-width: 56.25em) {
+  .rightSide .slide {
+    justify-content: center;
+    align-items: center;
+  }
 }
-.rightSide .slide .imgs::before {
-  content: "";
-  background: #ffb3b3;
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.rightSide .slide .imgs {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 90em) {
+  .rightSide .slide .imgs img {
+    width: 90%;
+  }
 }
 .rightSide .slide__btns {
   display: flex;
@@ -210,6 +385,11 @@ body {
   background-position: center bottom;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 37.5em) {
+  .leftSideUp {
+    margin: 0 auto;
+  }
+}
 
 .leftSideDown {
   padding: 1.5rem 0;
@@ -217,6 +397,28 @@ body {
   display: flex;
   justify-content: start;
   align-items: flex-end;
+}
+@media only screen and (max-width: 56.25em) {
+  .leftSideDown {
+    position: absolute;
+    top: 82rem;
+    right: 2rem;
+  }
+}
+@media only screen and (max-width: 46.875em) {
+  .leftSideDown {
+    right: 0;
+    left: 47rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .leftSideDown {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+  }
 }
 .leftSideDown .icon {
   cursor: pointer;
