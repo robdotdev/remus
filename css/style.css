@@ -121,6 +121,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "orar" "slide";
+    padding-top: 0;
   }
 }
 .rightSide .h1 {
@@ -140,6 +141,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    top: 14rem;
   }
 }
 .rightSide .h1 .para--header {
@@ -150,6 +153,8 @@ body {
 @media only screen and (max-width: 37.5em) {
   .rightSide .h1 .para--header {
     margin-left: 0;
+    padding: 0 1rem;
+    flex-direction: column;
   }
 }
 .rightSide .h1 .para--header p {
@@ -173,6 +178,11 @@ body {
 @media only screen and (max-width: 44.0625em) {
   .rightSide .h1 h1 {
     font-size: 11rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .rightSide .h1 h1 {
+    text-align: center;
   }
 }
 @media only screen and (max-width: 20.125em) {
@@ -222,6 +232,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: max-content;
   }
 }
 .rightSide .orar__btn {
@@ -316,6 +327,8 @@ body {
 @media only screen and (max-width: 37.5em) {
   .rightSide .btnbook {
     padding-right: 0;
+    position: absolute;
+    top: 32rem;
   }
 }
 .rightSide .btn {
@@ -393,11 +406,6 @@ body {
 @media only screen and (max-width: 37.5em) {
   .leftSideUp {
     margin: 0 auto;
-  }
-}
-@media only screen and (max-width: 20.125em) {
-  .leftSideUp {
-    width: 90%;
   }
 }
 

@@ -115,6 +115,7 @@
     grid-template-areas:
       'orar'
       'slide';
+    padding-top: 0;
   }
 
   & .h1 {
@@ -134,6 +135,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 0;
+      top: 14rem;
     }
     & .para--header {
       display: flex;
@@ -142,6 +145,8 @@
 
       @media only screen and (max-width: $bp-small) {
         margin-left: 0;
+        padding: 0 1rem;
+        flex-direction: column;
       }
 
       & p {
@@ -165,6 +170,10 @@
 
       @media only screen and (max-width: 44.0625em) {
         font-size: 11rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        text-align: center;
       }
 
       @media only screen and (max-width: 20.125em) {
@@ -210,6 +219,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      height: max-content;
     }
 
     &__btn {
@@ -312,6 +322,8 @@
 
     @media only screen and (max-width: $bp-small) {
       padding-right: 0;
+      position: absolute;
+      top: 32rem;
     }
   }
 
@@ -404,9 +416,9 @@
     margin: 0 auto;
   }
 
-  @media only screen and (max-width: 20.125em) {
-    width: 90%;
-  }
+  // @media only screen and (max-width: 20.125em) {
+  //   width: 90%;
+  // }
 }
 .leftSideDown {
   padding: 1.5rem 0;
