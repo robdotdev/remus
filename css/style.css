@@ -25,6 +25,11 @@ html {
     font-size: 40%;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 45%;
+  }
+}
 
 body {
   font-family: "Poppins", sans-serif;
