@@ -166,6 +166,10 @@
       @media only screen and (max-width: 44.0625em) {
         font-size: 11rem;
       }
+
+      @media only screen and (max-width: 20.125em) {
+        font-size: 9rem;
+      }
     }
   }
 
@@ -398,6 +402,10 @@
 
   @media only screen and (max-width: $bp-small) {
     margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 20.125em) {
+    width: 90%;
   }
 }
 .leftSideDown {

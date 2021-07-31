@@ -175,6 +175,11 @@ body {
     font-size: 11rem;
   }
 }
+@media only screen and (max-width: 20.125em) {
+  .rightSide .h1 h1 {
+    font-size: 9rem;
+  }
+}
 .rightSide .orar {
   grid-area: orar;
   display: flex;
@@ -388,6 +393,11 @@ body {
 @media only screen and (max-width: 37.5em) {
   .leftSideUp {
     margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 20.125em) {
+  .leftSideUp {
+    width: 90%;
   }
 }
 
