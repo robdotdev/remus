@@ -257,6 +257,10 @@
       @media only screen and (max-width: $bp-large) {
         margin-bottom: 4rem;
       }
+      @media only screen and (max-width: $bp-small) {
+        width: 28rem;
+        height: 8rem;
+      }
 
       &:not(:last-child) {
         margin-bottom: 4rem;
@@ -284,6 +288,10 @@
           background-repeat: no-repeat;
           background-position: center center;
           border-radius: 10rem;
+
+          @media only screen and (max-width: $bp-large) {
+            background-size: 70%;
+          }
         }
 
         &__clock {
@@ -294,6 +302,9 @@
           background-repeat: no-repeat;
           background-position: center center;
           border-radius: 10rem;
+          @media only screen and (max-width: $bp-large) {
+            background-size: 70%;
+          }
         }
 
         &__phone {
@@ -304,6 +315,9 @@
           background-repeat: no-repeat;
           background-position: center center;
           border-radius: 10rem;
+          @media only screen and (max-width: $bp-large) {
+            background-size: 70%;
+          }
         }
       }
 
@@ -311,6 +325,10 @@
         margin-left: 2rem;
         font-size: 1.6rem;
         color: #4e4e4e;
+
+        @media only screen and (max-width: $bp-small) {
+          margin-left: 4rem;
+        }
       }
     }
   }
@@ -348,6 +366,11 @@
 
     & img {
       margin-right: 0.7rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        width: 30%;
+        height: auto;
+      }
     }
   }
 
@@ -390,6 +413,14 @@
       padding-right: 12rem;
       padding-top: 1rem;
 
+      @media only screen and (max-width: $bp-medium) {
+        width: 100%;
+        padding-right: 0;
+        display: flex;
+        justify-content: center;
+        padding-top: 1.5rem;
+      }
+
       & span {
         margin: 0 1rem;
         font-size: 2.6rem;
@@ -427,7 +458,7 @@
   // background-color: blueviolet;
   display: flex;
   justify-content: start;
-  align-items: flex-end;
+  align-items: center;
   // margin-bottom: 1rem;
 
   @media only screen and (max-width: $bp-medium) {

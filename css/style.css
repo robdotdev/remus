@@ -276,6 +276,12 @@ body {
     margin-bottom: 4rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .rightSide .orar__card {
+    width: 28rem;
+    height: 8rem;
+  }
+}
 .rightSide .orar__card:not(:last-child) {
   margin-bottom: 4rem;
 }
@@ -303,6 +309,11 @@ body {
   background-position: center center;
   border-radius: 10rem;
 }
+@media only screen and (max-width: 68.75em) {
+  .rightSide .orar__card--icon__calendar {
+    background-size: 70%;
+  }
+}
 .rightSide .orar__card--icon__clock {
   background: url(/img/ceas-icon.png), #ffafaf;
   width: 4.6rem;
@@ -310,6 +321,11 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   border-radius: 10rem;
+}
+@media only screen and (max-width: 68.75em) {
+  .rightSide .orar__card--icon__clock {
+    background-size: 70%;
+  }
 }
 .rightSide .orar__card--icon__phone {
   background: url(/img/phone-icon.png), #ffafaf;
@@ -319,10 +335,20 @@ body {
   background-position: center center;
   border-radius: 10rem;
 }
+@media only screen and (max-width: 68.75em) {
+  .rightSide .orar__card--icon__phone {
+    background-size: 70%;
+  }
+}
 .rightSide .orar__card--txt {
   margin-left: 2rem;
   font-size: 1.6rem;
   color: #4e4e4e;
+}
+@media only screen and (max-width: 37.5em) {
+  .rightSide .orar__card--txt {
+    margin-left: 4rem;
+  }
 }
 .rightSide .btnbook {
   display: flex;
@@ -358,6 +384,12 @@ body {
 .rightSide .btn img {
   margin-right: 0.7rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .rightSide .btn img {
+    width: 30%;
+    height: auto;
+  }
+}
 .rightSide .slide {
   grid-area: slide;
   display: flex;
@@ -386,6 +418,15 @@ body {
   align-items: center;
   padding-right: 12rem;
   padding-top: 1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .rightSide .slide__btns {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+  }
 }
 .rightSide .slide__btns span {
   margin: 0 1rem;
@@ -418,7 +459,7 @@ body {
   grid-area: leftSideDown;
   display: flex;
   justify-content: start;
-  align-items: flex-end;
+  align-items: center;
 }
 @media only screen and (max-width: 56.25em) {
   .leftSideDown {
