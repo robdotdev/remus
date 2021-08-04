@@ -1,10 +1,10 @@
 .header {
   max-width: 144rem;
-  max-height: 90vh;
+  min-height: 90vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr max-content;
   gap: 0px 0px;
   grid-template-areas:
     'leftSideUp rightSide rightSide'
@@ -13,7 +13,14 @@
 
   @media only screen and (max-width: $bp-medium) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'leftSideUp'
+      'rightSide';
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content 1fr;
     grid-template-areas:
       'leftSideUp'
       'leftSideDown'
@@ -86,6 +93,7 @@
   grid-area: rightSide;
   // background-color: blue;
   padding-top: 10rem;
+  height: max-content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: max-content 1fr;
@@ -95,7 +103,7 @@
     'orar slide slide';
 
   @media only screen and (max-width: $bp-large) {
-    grid-template-rows: max-content 1fr 1fr 1fr;
+    grid-template-rows: max-content max-content max-content max-content;
     grid-template-areas:
       'h1 h1 h1'
       'btn btn btn'
@@ -184,6 +192,7 @@
 
   & .orar {
     grid-area: orar;
+    height: max-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -376,6 +385,7 @@
 
   & .slide {
     grid-area: slide;
+    height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -459,6 +469,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  height: max-content;
   // margin-bottom: 1rem;
 
   @media only screen and (max-width: $bp-medium) {
