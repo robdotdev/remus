@@ -504,7 +504,6 @@ body {
 #about {
   overflow: hidden;
   max-width: 144rem;
-  max-height: 100vh;
   margin: 0 auto;
   padding-top: 5.3rem;
 }
