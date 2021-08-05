@@ -33,12 +33,14 @@
 }
 
 .menu {
+  position: relative;
   max-width: 144rem;
   margin: 0 auto;
   padding: 1.5rem 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 20000;
   &--logo {
   }
   &--links {
@@ -71,6 +73,117 @@
       border-radius: 2rem;
       font-size: 1.8rem;
       color: #fff;
+    }
+  }
+  ul {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    transform: translate(-95%, -50%);
+    width: 7rem;
+    height: 8rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: 50em) {
+      visibility: visible;
+    }
+  }
+  ul li {
+    list-style: none;
+    position: absolute;
+    background: #fff;
+    width: 80%;
+    height: 0.6rem;
+    border-radius: 2rem;
+    transform: translateY(-50%);
+    transition: 0.9s;
+  }
+  ul li:nth-of-type(1) {
+    top: 20%;
+  }
+  ul li:nth-of-type(2) {
+    top: 50%;
+  }
+  ul li:nth-of-type(3),
+  ul li:nth-of-type(4) {
+    width: 50%;
+    top: 80%;
+  }
+  ul li:nth-of-type(1),
+  ul li:nth-of-type(2),
+  ul li:nth-of-type(3) {
+    left: 0;
+  }
+  ul li:nth-of-type(4) {
+    right: 0;
+  }
+
+  ul.active li:nth-of-type(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  ul.active li:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  ul.active li:nth-of-type(3) {
+    left: -50%;
+    opacity: 0;
+  }
+  ul.active li:nth-of-type(4) {
+    right: -50%;
+    opacity: 0;
+  }
+
+  &--hamblinks {
+    position: absolute;
+    background: #fff;
+    border-radius: 0 0 3rem 3rem;
+    width: 70rem;
+    height: 45rem;
+    top: -1000%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding-top: 5.5rem;
+    transition: 0.9s;
+    opacity: 0.5;
+
+    &.active {
+      top: 100%;
+      opacity: 1;
+    }
+
+    &__link {
+      color: #000;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.8rem;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__btn {
+      width: 15rem;
+      height: 4.5rem;
+      background: #ff6b6b;
+      border-radius: 2rem;
+      margin-top: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: normal;
+      font-style: normal;
+      cursor: pointer;
     }
   }
 }
